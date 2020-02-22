@@ -1,7 +1,7 @@
-require 'greeter'
+#!/usr/bin/ruby -wKU
 
-# Default is World
-name = ARGV.first || "World"
+task :default => :run
 
-greeter = Greeter.new(name)
-puts greeter.greet
+task :run do
+  ruby '-Ilib', 'lib/hello.rb'
+end
